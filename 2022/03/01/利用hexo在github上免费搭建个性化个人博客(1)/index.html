@@ -1,0 +1,167 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="利用hexo在github上免费搭建个性化个人博客"><meta name="keywords" content="hexo"><meta name="author" content="Chai Chunyang,undefined"><meta name="copyright" content="Chai Chunyang"><title>利用hexo在github上免费搭建个性化个人博客 | Blog of ChaiChunyang</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@latest/dist/reveal.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@latest/dist/reset.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@latest/dist/theme/night.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/highlight/monokai.css"><meta name="generator" content="Hexo 6.0.0"></head><body><div class="reveal"><div class="slides"><section data-markdown data-separator="===" data-separator-vertical="==" data-charset="utf-8"><script type="text/template">
+### 利用hexo在github上免费搭建
+
+### 个性化个人博客
+<!-- .slide: data-transition="fade" data-background="#F0C4B6" -->
+
+===
+### First
+<!-- .slide: data-transition="fade" data-background="#F0B4F6" -->
+在github上创建一个新项目。
+
+#### 注意
+
+1.Repository name 中填yourname.github.io (yourname自己填)
+
+2.选择public（公开） 
+===
+### Second
+<!-- .slide: data-transition="fade" data-background="#50B4F6" -->
+
+安装 git 和 node.js
+
+==
+<!-- .slide: data-transition="fade" data-background="#50B4F6" -->
+
+全部选默认即可
+
+安装完成后，在控制台中输入
+
+"node -v"和"git --version"
+
+如果成功则会显示当前的版本号
+
+===
+
+### Third
+<!-- .slide: data-transition="fade" data-background="#AAD5C7" -->
+
+打开 Git Bash 输入"ssh-keygen -t rsa -C 'email' " 
+
+email为你注册github所用的邮箱
+==
+<!-- .slide: data-transition="fade" data-background="#00C4B6" -->
+接下来输入3次换行
+
+在C盘下用户文件夹里进入你当前用户
+
+打开 .ssh 文件夹，找到"id_rsa.pub"
+
+同时在github项目中找到 
+
+Settings -> Deploy keys -> Add deploy key
+==
+<!-- .slide: data-transition="fade" data-background="#00C4B6" -->
+title 填什么都可以，Key 中粘贴
+
+我们刚刚在 id_rsa.pub 文件中的内容
+
+保存后，在 Git Bash 中输入"ssh -T git@github.com"
+
+看到"You’ve successfully authenticated"即为成功
+===
+### Forth
+<!-- .slide: data-transition="fade" data-background="#C4C4B1" -->
+在你所选的盘根目录下创建文件夹，名字自己定
+
+在其目录控制台中输入"npm insatll hexo -g"
+
+完成后输入 "hexo -v" 检查安装是否成功
+==
+<!-- .slide: data-transition="fade" data-background="#C4C4B1" -->
+在此处用Git Bash 依次输入
+
+"hexo init"
+
+"npm install"
+
+"hexo g"
+
+"hexo s"
+==
+<!-- .slide: data-transition="fade" data-background="#C4C4B1" -->
+如果显示
+
+INFO Start processing
+
+INFO Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.
+
+即为成功，可以在 localhost:4000 本地查看
+
+注：添加文章可以在\source\_posts 中添加
+===
+### Fifth
+<!-- .slide: data-transition="fade" data-background="#CCF4F3" -->
+打开_config.yml文件，将deploy字段改为如下内容
+
+
+```
+
+deploy:
+    
+  type: git
+    
+  repository: git@github.com:someurl/someurl.github.io.git
+    
+  branch: master
+
+```
+git@github.com:someurl/someurl.github.io.git
+
+是博客仓库的地址，获取方式是登录GitHub，
+
+找到自己的博客的仓库
+
+便可将本地文件上传至github
+==
+<!-- .slide: data-transition="fade" data-background="#CCF4F3" -->
+然后进入setting 中的Pages
+
+Source选择master branch
+
+这意味着我们把我们的博客
+
+以及博客配置生成所需要的相关文件
+
+都放到我们这个仓库的主干中。
+
+不要点击(Choose a theme)
+===
+#### Finally
+<!-- .slide: data-transition="fade" data-background="#FCF4A3" -->
+
+在 yourname.github.io 上即可查看博客
+
+完结撒花</script></section></div></div><script src="https://cdn.jsdelivr.net/npm/reveal.js@latest/dist/reveal.js"></script><script src="https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/zoom/zoom.js"></script><script src="https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/search/search.js"></script><script src="https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/notes/notes.js"></script><script src="https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/math/math.js"></script><script src="https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/markdown/markdown.js"></script><script src="https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/highlight/highlight.js"></script><script>Reveal.initialize({
+  mouseWheel: false,
+  transition: 'slide',
+  transitionSpeed: 'default',
+  parallaxBackgroundImage: '',
+  parallaxBackgroundSize: '',
+  parallaxBackgroundHorizontal: '',
+  parallaxBackgroundVertical: '',
+  autoSlide: false,
+  loop: false,
+  controlsLayout: 'bottom-right', // Determines where controls appear, "edges" or "bottom-right"
+  controlsBackArrows: 'faded',
+  progress: true,
+  showNotes: false,
+  autoPlayMedia: false,
+  backgroundTransition: 'fade',
+  markdown: {
+    smartypants: true
+  },
+  plugins: [
+  RevealMarkdown,
+  // Markdown
+  RevealHighlight,
+  // Search
+  RevealSearch,
+  // Speaker notes
+  RevealNotes,
+  // Zoom in and out with Alt+click
+  RevealZoom,
+  // MathJax
+  RevealMath
+  ]
+});</script></body></html>
