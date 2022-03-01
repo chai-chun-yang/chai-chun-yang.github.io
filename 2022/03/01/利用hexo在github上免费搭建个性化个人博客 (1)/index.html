@@ -27,7 +27,7 @@
 
 安装完成后，在控制台中输入
 
-"node -v"和"git --version"
+"node -v"和"git -\-version"
 
 如果成功则会显示当前的版本号
 
@@ -36,11 +36,11 @@
 ### Third
 <!-- .slide: data-transition="fade" data-background="#AAD5C7" -->
 
-打开 Git Bash 输入"ssh-keygen -t rsa -C 'email' " 
+打开 Git Bash 输入"ssh-keygen -t rsa -C email" 
 
 email为你注册github所用的邮箱
 ==
-<!-- .slide: data-transition="fade" data-background="#00C4B6" -->
+<!-- .slide: data-transition="fade" data-background="#AAD5C7" -->
 接下来输入3次换行
 
 在C盘下用户文件夹里进入你当前用户
@@ -51,7 +51,7 @@ email为你注册github所用的邮箱
 
 Settings -> Deploy keys -> Add deploy key
 ==
-<!-- .slide: data-transition="fade" data-background="#00C4B6" -->
+<!-- .slide: data-transition="fade" data-background="#AAD5C7" -->
 title 填什么都可以，Key 中粘贴
 
 我们刚刚在 id_rsa.pub 文件中的内容
@@ -69,7 +69,9 @@ title 填什么都可以，Key 中粘贴
 完成后输入 "hexo -v" 检查安装是否成功
 ==
 <!-- .slide: data-transition="fade" data-background="#C4C4B1" -->
-在此处用Git Bash 依次输入
+在此处用Git Bash 
+
+依次输入
 
 "hexo init"
 
@@ -81,11 +83,10 @@ title 填什么都可以，Key 中粘贴
 ==
 <!-- .slide: data-transition="fade" data-background="#C4C4B1" -->
 如果显示
-
+```
 INFO Start processing
-
 INFO Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.
-
+```
 即为成功，可以在 localhost:4000 本地查看
 
 注：添加文章可以在\source\_posts 中添加
