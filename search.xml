@@ -3,101 +3,135 @@
   <entry>
     <title>十二重计数法</title>
     <url>/2023/10/15/%E5%8D%81%E4%BA%8C%E9%87%8D%E8%AE%A1%E6%95%B0%E6%B3%95/</url>
-    <content><![CDATA[<h1 id="十二重计数法"><a href="#十二重计数法" class="headerlink" title="十二重计数法"></a>十二重计数法</h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>有 $n$ 个球和 $m$ 个盒子，要全部装进盒子里。<br>还有一些限制条件，那么有多少种方法放球？</p>
+    <content><![CDATA[<h1 id="十二重计数法">十二重计数法</h1>
+<h2 id="题目描述">题目描述</h2>
+<p>有 <span class="math inline">\(n\)</span> 个球和 <span
+class="math inline">\(m\)</span> 个盒子，要全部装进盒子里。
+还有一些限制条件，那么有多少种方法放球？</p>
 <table>
 <thead>
-<tr>
-<th align="center">编号</th>
-<th align="center">球是否相同</th>
-<th align="center">盒子是否相同</th>
-<th align="center">其他条件</th>
+<tr class="header">
+<th style="text-align: center;">编号</th>
+<th style="text-align: center;">球是否相同</th>
+<th style="text-align: center;">盒子是否相同</th>
+<th style="text-align: center;">其他条件</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">I</td>
-<td align="center">否</td>
-<td align="center">否</td>
-<td align="center">&#x2F;</td>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">I</td>
+<td style="text-align: center;">否</td>
+<td style="text-align: center;">否</td>
+<td style="text-align: center;">/</td>
 </tr>
-<tr>
-<td align="center">II</td>
-<td align="center">否</td>
-<td align="center">否</td>
-<td align="center">每盒最多一个</td>
+<tr class="even">
+<td style="text-align: center;">II</td>
+<td style="text-align: center;">否</td>
+<td style="text-align: center;">否</td>
+<td style="text-align: center;">每盒最多一个</td>
 </tr>
-<tr>
-<td align="center">III</td>
-<td align="center">否</td>
-<td align="center">否</td>
-<td align="center">每盒至少一个</td>
+<tr class="odd">
+<td style="text-align: center;">III</td>
+<td style="text-align: center;">否</td>
+<td style="text-align: center;">否</td>
+<td style="text-align: center;">每盒至少一个</td>
 </tr>
-<tr>
-<td align="center">IV</td>
-<td align="center">否</td>
-<td align="center">是</td>
-<td align="center">&#x2F;</td>
+<tr class="even">
+<td style="text-align: center;">IV</td>
+<td style="text-align: center;">否</td>
+<td style="text-align: center;">是</td>
+<td style="text-align: center;">/</td>
 </tr>
-<tr>
-<td align="center">V</td>
-<td align="center">否</td>
-<td align="center">是</td>
-<td align="center">每盒最多一个</td>
+<tr class="odd">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">否</td>
+<td style="text-align: center;">是</td>
+<td style="text-align: center;">每盒最多一个</td>
 </tr>
-<tr>
-<td align="center">VI</td>
-<td align="center">否</td>
-<td align="center">是</td>
-<td align="center">每盒至少一个</td>
+<tr class="even">
+<td style="text-align: center;">VI</td>
+<td style="text-align: center;">否</td>
+<td style="text-align: center;">是</td>
+<td style="text-align: center;">每盒至少一个</td>
 </tr>
-<tr>
-<td align="center">VII</td>
-<td align="center">是</td>
-<td align="center">否</td>
-<td align="center">&#x2F;</td>
+<tr class="odd">
+<td style="text-align: center;">VII</td>
+<td style="text-align: center;">是</td>
+<td style="text-align: center;">否</td>
+<td style="text-align: center;">/</td>
 </tr>
-<tr>
-<td align="center">VIII</td>
-<td align="center">是</td>
-<td align="center">否</td>
-<td align="center">每盒最多一个</td>
+<tr class="even">
+<td style="text-align: center;">VIII</td>
+<td style="text-align: center;">是</td>
+<td style="text-align: center;">否</td>
+<td style="text-align: center;">每盒最多一个</td>
 </tr>
-<tr>
-<td align="center">IX</td>
-<td align="center">是</td>
-<td align="center">否</td>
-<td align="center">每盒至少一个</td>
+<tr class="odd">
+<td style="text-align: center;">IX</td>
+<td style="text-align: center;">是</td>
+<td style="text-align: center;">否</td>
+<td style="text-align: center;">每盒至少一个</td>
 </tr>
-<tr>
-<td align="center">X</td>
-<td align="center">是</td>
-<td align="center">是</td>
-<td align="center">&#x2F;</td>
+<tr class="even">
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">是</td>
+<td style="text-align: center;">是</td>
+<td style="text-align: center;">/</td>
 </tr>
-<tr>
-<td align="center">XI</td>
-<td align="center">是</td>
-<td align="center">是</td>
-<td align="center">每盒最多一个</td>
+<tr class="odd">
+<td style="text-align: center;">XI</td>
+<td style="text-align: center;">是</td>
+<td style="text-align: center;">是</td>
+<td style="text-align: center;">每盒最多一个</td>
 </tr>
-<tr>
-<td align="center">XII</td>
-<td align="center">是</td>
-<td align="center">是</td>
-<td align="center">每盒至少一个</td>
+<tr class="even">
+<td style="text-align: center;">XII</td>
+<td style="text-align: center;">是</td>
+<td style="text-align: center;">是</td>
+<td style="text-align: center;">每盒至少一个</td>
 </tr>
-</tbody></table>
-<h3 id="I"><a href="#I" class="headerlink" title="I"></a>I</h3><p>$$F_I[n,m]&#x3D;m^n$$</p>
-<h3 id="II"><a href="#II" class="headerlink" title="II"></a>II</h3><p>$$F_{II}[n,m]&#x3D;\prod_{i&#x3D;1}^{n}{(m-i+1)}&#x3D;m^{\underline{n}}$$</p>
-<h3 id="III"><a href="#III" class="headerlink" title="III"></a>III</h3><p>$$F_{III}[n,m]&#x3D;\sum_{i&#x3D;0}^{m}{\left((-1)^{m-i}\times C_i^m\times i^n\right)}$$</p>
-<h3 id="IV"><a href="#IV" class="headerlink" title="IV"></a>IV</h3><p>$$F_{IV}[n,m]&#x3D;\sum_{i&#x3D;0}^{m}{\left(\sum_{j&#x3D;0}^{i}{\frac{(-1)^{i-j}\times j^n}{j!\times(i-j)!}}\right)}$$</p>
-<h3 id="V"><a href="#V" class="headerlink" title="V"></a>V</h3><p>$$ F_{V}[n,m]&#x3D;\left{\begin{aligned}0 &amp; &amp;(n&gt;m) \1 &amp; &amp;(n\leq m)\end{aligned}\right.$$</p>
-<h3 id="VI"><a href="#VI" class="headerlink" title="VI"></a>VI</h3><p>$$F_{IV}[n,m]&#x3D;\sum_{j&#x3D;0}^{m}{\frac{(-1)^{m-j}\times j^n}{j!\times(m-j)!}}$$</p>
-<h3 id="VII"><a href="#VII" class="headerlink" title="VII"></a>VII</h3><p>$$F_{VII}[n,m]&#x3D;C_{m-1}^{n+m-1}$$</p>
-<h3 id="VIII"><a href="#VIII" class="headerlink" title="VIII"></a>VIII</h3><p>$$F_{VII}[n,m]&#x3D;C_{n}^{m}$$</p>
-<h3 id="IX"><a href="#IX" class="headerlink" title="IX"></a>IX</h3><p>$$F_{VII}[n,m]&#x3D;C_{m-1}^{n-1}$$</p>
-<h3 id="X"><a href="#X" class="headerlink" title="X"></a>X</h3><p>$$ F_{X}[n,m]&#x3D;\left{\begin{aligned}&amp;1  &amp;(n&#x3D;0)&amp;\&amp;0  &amp;(n\not&#x3D;0\ and\ m&#x3D;0)&amp;\&amp;0  &amp;(n&lt;0\ or \ m&lt;0)&amp;\&amp;F_{X}[n,m-1]+F_{X}[n-m,m]&amp; others&amp;\end{aligned}\right.$$</p>
-<h3 id="XI"><a href="#XI" class="headerlink" title="XI"></a>XI</h3><p>$$ F_{XI}[n,m]&#x3D;\left{\begin{aligned}0 &amp; &amp;(n&gt;m) \1 &amp; &amp;(n\leq m)\end{aligned}\right.$$</p>
-<h3 id="XII"><a href="#XII" class="headerlink" title="XII"></a>XII</h3><p>$$F_{XII}[n,m]&#x3D;F_{X}[n-m,m]$$</p>
+</tbody>
+</table>
+<h3 id="i">I</h3>
+<p><span class="math display">\[F_I[n,m]=m^n\]</span></p>
+<h3 id="ii">II</h3>
+<p><span
+class="math display">\[F_{II}[n,m]=\prod_{i=1}^{n}{(m-i+1)}=m^{\underline{n}}\]</span></p>
+<h3 id="iii">III</h3>
+<p><span
+class="math display">\[F_{III}[n,m]=\sum_{i=0}^{m}{\left((-1)^{m-i}\times
+C_i^m\times i^n\right)}\]</span></p>
+<h3 id="iv">IV</h3>
+<p><span
+class="math display">\[F_{IV}[n,m]=\sum_{i=0}^{m}{\left(\sum_{j=0}^{i}{\frac{(-1)^{i-j}\times
+j^n}{j!\times(i-j)!}}\right)}\]</span></p>
+<h3 id="v">V</h3>
+<p><span class="math display">\[ F_{V}[n,m]=\left\{\begin{aligned}0
+&amp; &amp;(n&gt;m) \\1 &amp; &amp;(n\leq
+m)\end{aligned}\right.\]</span></p>
+<h3 id="vi">VI</h3>
+<p><span
+class="math display">\[F_{IV}[n,m]=\sum_{j=0}^{m}{\frac{(-1)^{m-j}\times
+j^n}{j!\times(m-j)!}}\]</span></p>
+<h3 id="vii">VII</h3>
+<p><span
+class="math display">\[F_{VII}[n,m]=C_{m-1}^{n+m-1}\]</span></p>
+<h3 id="viii">VIII</h3>
+<p><span class="math display">\[F_{VII}[n,m]=C_{n}^{m}\]</span></p>
+<h3 id="ix">IX</h3>
+<p><span class="math display">\[F_{VII}[n,m]=C_{m-1}^{n-1}\]</span></p>
+<h3 id="x">X</h3>
+<p><span class="math display">\[
+F_{X}[n,m]=\left\{\begin{aligned}&amp;1  &amp;(n=0)&amp;\\&amp;0  &amp;(n\not=0\
+and\ m=0)&amp;\\&amp;0  &amp;(n&lt;0\ or \
+m&lt;0)&amp;\\&amp;F_{X}[n,m-1]+F_{X}[n-m,m]&amp;
+others&amp;\end{aligned}\right.\]</span></p>
+<h3 id="xi">XI</h3>
+<p><span class="math display">\[ F_{XI}[n,m]=\left\{\begin{aligned}0
+&amp; &amp;(n&gt;m) \\1 &amp; &amp;(n\leq
+m)\end{aligned}\right.\]</span></p>
+<h3 id="xii">XII</h3>
+<p><span class="math display">\[F_{XII}[n,m]=F_{X}[n-m,m]\]</span></p>
 <link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
       <tags>
         <tag>math</tag>
