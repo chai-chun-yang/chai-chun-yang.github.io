@@ -152,13 +152,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -180,6 +180,76 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/10/16/T1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Chai Chunyang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog of ChaiChunyang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Blog of ChaiChunyang">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/10/16/T1/" class="post-title-link" itemprop="url">T1</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-10-16 14:20:48 / 修改时间：14:21:26" itemprop="dateCreated datePublished" datetime="2023-10-16T14:20:48+08:00">2023-10-16</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> int long long</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">int</span> T,n,a[<span class="number">100039</span>],ans;</span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%lld&quot;</span>,&amp;T);</span><br><span class="line">	<span class="keyword">while</span>(T--)&#123;ans=<span class="number">1</span>;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%lld&quot;</span>,&amp;n);</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;<span class="built_in">scanf</span>(<span class="string">&quot;%lld&quot;</span>,&amp;a[i]);&#125;</span><br><span class="line">		<span class="keyword">if</span>(n==<span class="number">1</span>)&#123;ans=<span class="number">1</span>;&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(n&amp;<span class="number">1</span>)&#123;</span><br><span class="line">			<span class="type">int</span> i,j;</span><br><span class="line">			<span class="keyword">for</span>(i=<span class="number">1</span>,j=n/<span class="number">2</span>+<span class="number">1</span>;i&lt;=n/<span class="number">2</span>&amp;&amp;j&lt;=n;)&#123;</span><br><span class="line">				<span class="keyword">if</span>(a[i]!=a[j])&#123;</span><br><span class="line">					<span class="keyword">if</span>(i==j-n/<span class="number">2</span>)&#123;j++;&#125;<span class="keyword">else</span>&#123;ans=<span class="number">0</span>;<span class="keyword">break</span>;&#125;</span><br><span class="line">				&#125;<span class="keyword">else</span>&#123;i++,j++;&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span>(i!=n/<span class="number">2</span>+<span class="number">1</span>)ans=<span class="number">0</span>; </span><br><span class="line">			<span class="keyword">for</span>(i=<span class="number">1</span>,j=n/<span class="number">2</span>+<span class="number">2</span>;i&lt;=n/<span class="number">2</span>+<span class="number">1</span>&amp;&amp;j&lt;=n;)&#123;</span><br><span class="line">				<span class="keyword">if</span>(a[i]!=a[j])&#123;</span><br><span class="line">					<span class="keyword">if</span>(i==j-n/<span class="number">2</span><span class="number">-1</span>)&#123;i++;&#125;<span class="keyword">else</span>&#123;ans=<span class="number">0</span>;<span class="keyword">break</span>;&#125;</span><br><span class="line">				&#125;<span class="keyword">else</span>&#123;i++,j++;&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span>(j!=n+<span class="number">1</span>)ans=<span class="number">0</span>; </span><br><span class="line">		&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n/<span class="number">2</span>;i++)&#123;</span><br><span class="line">				<span class="keyword">if</span>(a[i]!=a[i+n/<span class="number">2</span>])&#123;ans=<span class="number">0</span>;<span class="keyword">break</span>;&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(!ans)<span class="built_in">printf</span>(<span class="string">&quot;YES\n&quot;</span>);</span><br><span class="line">		<span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">&quot;NO\n&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -225,7 +295,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-10-16 10:18:26" itemprop="dateModified" datetime="2023-10-16T10:18:26+08:00">2023-10-16</time>
+      <time title="修改时间：2023-10-16 12:48:56" itemprop="dateModified" datetime="2023-10-16T12:48:56+08:00">2023-10-16</time>
     </span>
 
   
@@ -238,101 +308,135 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="十二重计数法"><a href="#十二重计数法" class="headerlink" title="十二重计数法"></a>十二重计数法</h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>有 $n$ 个球和 $m$ 个盒子，要全部装进盒子里。<br>还有一些限制条件，那么有多少种方法放球？</p>
+          <h1 id="十二重计数法">十二重计数法</h1>
+<h2 id="题目描述">题目描述</h2>
+<p>有 <span class="math inline">\(n\)</span> 个球和 <span
+class="math inline">\(m\)</span> 个盒子，要全部装进盒子里。
+还有一些限制条件，那么有多少种方法放球？</p>
 <table>
 <thead>
-<tr>
-<th align="center">编号</th>
-<th align="center">球是否相同</th>
-<th align="center">盒子是否相同</th>
-<th align="center">其他条件</th>
+<tr class="header">
+<th style="text-align: center;">编号</th>
+<th style="text-align: center;">球是否相同</th>
+<th style="text-align: center;">盒子是否相同</th>
+<th style="text-align: center;">其他条件</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">I</td>
-<td align="center">否</td>
-<td align="center">否</td>
-<td align="center">&#x2F;</td>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">I</td>
+<td style="text-align: center;">否</td>
+<td style="text-align: center;">否</td>
+<td style="text-align: center;">/</td>
 </tr>
-<tr>
-<td align="center">II</td>
-<td align="center">否</td>
-<td align="center">否</td>
-<td align="center">每盒最多一个</td>
+<tr class="even">
+<td style="text-align: center;">II</td>
+<td style="text-align: center;">否</td>
+<td style="text-align: center;">否</td>
+<td style="text-align: center;">每盒最多一个</td>
 </tr>
-<tr>
-<td align="center">III</td>
-<td align="center">否</td>
-<td align="center">否</td>
-<td align="center">每盒至少一个</td>
+<tr class="odd">
+<td style="text-align: center;">III</td>
+<td style="text-align: center;">否</td>
+<td style="text-align: center;">否</td>
+<td style="text-align: center;">每盒至少一个</td>
 </tr>
-<tr>
-<td align="center">IV</td>
-<td align="center">否</td>
-<td align="center">是</td>
-<td align="center">&#x2F;</td>
+<tr class="even">
+<td style="text-align: center;">IV</td>
+<td style="text-align: center;">否</td>
+<td style="text-align: center;">是</td>
+<td style="text-align: center;">/</td>
 </tr>
-<tr>
-<td align="center">V</td>
-<td align="center">否</td>
-<td align="center">是</td>
-<td align="center">每盒最多一个</td>
+<tr class="odd">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">否</td>
+<td style="text-align: center;">是</td>
+<td style="text-align: center;">每盒最多一个</td>
 </tr>
-<tr>
-<td align="center">VI</td>
-<td align="center">否</td>
-<td align="center">是</td>
-<td align="center">每盒至少一个</td>
+<tr class="even">
+<td style="text-align: center;">VI</td>
+<td style="text-align: center;">否</td>
+<td style="text-align: center;">是</td>
+<td style="text-align: center;">每盒至少一个</td>
 </tr>
-<tr>
-<td align="center">VII</td>
-<td align="center">是</td>
-<td align="center">否</td>
-<td align="center">&#x2F;</td>
+<tr class="odd">
+<td style="text-align: center;">VII</td>
+<td style="text-align: center;">是</td>
+<td style="text-align: center;">否</td>
+<td style="text-align: center;">/</td>
 </tr>
-<tr>
-<td align="center">VIII</td>
-<td align="center">是</td>
-<td align="center">否</td>
-<td align="center">每盒最多一个</td>
+<tr class="even">
+<td style="text-align: center;">VIII</td>
+<td style="text-align: center;">是</td>
+<td style="text-align: center;">否</td>
+<td style="text-align: center;">每盒最多一个</td>
 </tr>
-<tr>
-<td align="center">IX</td>
-<td align="center">是</td>
-<td align="center">否</td>
-<td align="center">每盒至少一个</td>
+<tr class="odd">
+<td style="text-align: center;">IX</td>
+<td style="text-align: center;">是</td>
+<td style="text-align: center;">否</td>
+<td style="text-align: center;">每盒至少一个</td>
 </tr>
-<tr>
-<td align="center">X</td>
-<td align="center">是</td>
-<td align="center">是</td>
-<td align="center">&#x2F;</td>
+<tr class="even">
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">是</td>
+<td style="text-align: center;">是</td>
+<td style="text-align: center;">/</td>
 </tr>
-<tr>
-<td align="center">XI</td>
-<td align="center">是</td>
-<td align="center">是</td>
-<td align="center">每盒最多一个</td>
+<tr class="odd">
+<td style="text-align: center;">XI</td>
+<td style="text-align: center;">是</td>
+<td style="text-align: center;">是</td>
+<td style="text-align: center;">每盒最多一个</td>
 </tr>
-<tr>
-<td align="center">XII</td>
-<td align="center">是</td>
-<td align="center">是</td>
-<td align="center">每盒至少一个</td>
+<tr class="even">
+<td style="text-align: center;">XII</td>
+<td style="text-align: center;">是</td>
+<td style="text-align: center;">是</td>
+<td style="text-align: center;">每盒至少一个</td>
 </tr>
-</tbody></table>
-<h3 id="I"><a href="#I" class="headerlink" title="I"></a>I</h3><p>$$F_I[n,m]&#x3D;m^n$$</p>
-<h3 id="II"><a href="#II" class="headerlink" title="II"></a>II</h3><p>$$F_{II}[n,m]&#x3D;\prod_{i&#x3D;1}^{n}{(m-i+1)}&#x3D;m^{\underline{n}}$$</p>
-<h3 id="III"><a href="#III" class="headerlink" title="III"></a>III</h3><p>$$F_{III}[n,m]&#x3D;\sum_{i&#x3D;0}^{m}{\left((-1)^{m-i}\times C_i^m\times i^n\right)}$$</p>
-<h3 id="IV"><a href="#IV" class="headerlink" title="IV"></a>IV</h3><p>$$F_{IV}[n,m]&#x3D;\sum_{i&#x3D;0}^{m}{\left(\sum_{j&#x3D;0}^{i}{\frac{(-1)^{i-j}\times j^n}{j!\times(i-j)!}}\right)}$$</p>
-<h3 id="V"><a href="#V" class="headerlink" title="V"></a>V</h3><p>$$ F_{V}[n,m]&#x3D;\left{\begin{aligned}0 &amp; &amp;(n&gt;m) \1 &amp; &amp;(n\leq m)\end{aligned}\right.$$</p>
-<h3 id="VI"><a href="#VI" class="headerlink" title="VI"></a>VI</h3><p>$$F_{IV}[n,m]&#x3D;\sum_{j&#x3D;0}^{m}{\frac{(-1)^{m-j}\times j^n}{j!\times(m-j)!}}$$</p>
-<h3 id="VII"><a href="#VII" class="headerlink" title="VII"></a>VII</h3><p>$$F_{VII}[n,m]&#x3D;C_{m-1}^{n+m-1}$$</p>
-<h3 id="VIII"><a href="#VIII" class="headerlink" title="VIII"></a>VIII</h3><p>$$F_{VII}[n,m]&#x3D;C_{n}^{m}$$</p>
-<h3 id="IX"><a href="#IX" class="headerlink" title="IX"></a>IX</h3><p>$$F_{VII}[n,m]&#x3D;C_{m-1}^{n-1}$$</p>
-<h3 id="X"><a href="#X" class="headerlink" title="X"></a>X</h3><p>$$ F_{X}[n,m]&#x3D;\left{\begin{aligned}&amp;1  &amp;(n&#x3D;0)&amp;\&amp;0  &amp;(n\not&#x3D;0\ and\ m&#x3D;0)&amp;\&amp;0  &amp;(n&lt;0\ or \ m&lt;0)&amp;\&amp;F_{X}[n,m-1]+F_{X}[n-m,m]&amp; others&amp;\end{aligned}\right.$$</p>
-<h3 id="XI"><a href="#XI" class="headerlink" title="XI"></a>XI</h3><p>$$ F_{XI}[n,m]&#x3D;\left{\begin{aligned}0 &amp; &amp;(n&gt;m) \1 &amp; &amp;(n\leq m)\end{aligned}\right.$$</p>
-<h3 id="XII"><a href="#XII" class="headerlink" title="XII"></a>XII</h3><p>$$F_{XII}[n,m]&#x3D;F_{X}[n-m,m]$$</p>
+</tbody>
+</table>
+<h3 id="i">I</h3>
+<p><span class="math display">\[F_I[n,m]=m^n\]</span></p>
+<h3 id="ii">II</h3>
+<p><span
+class="math display">\[F_{II}[n,m]=\prod_{i=1}^{n}{(m-i+1)}=m^{\underline{n}}\]</span></p>
+<h3 id="iii">III</h3>
+<p><span
+class="math display">\[F_{III}[n,m]=\sum_{i=0}^{m}{\left((-1)^{m-i}\times
+C_i^m\times i^n\right)}\]</span></p>
+<h3 id="iv">IV</h3>
+<p><span
+class="math display">\[F_{IV}[n,m]=\sum_{i=0}^{m}{\left(\sum_{j=0}^{i}{\frac{(-1)^{i-j}\times
+j^n}{j!\times(i-j)!}}\right)}\]</span></p>
+<h3 id="v">V</h3>
+<p><span class="math display">\[ F_{V}[n,m]=\left\{\begin{aligned}0
+&amp; &amp;(n&gt;m) \\1 &amp; &amp;(n\leq
+m)\end{aligned}\right.\]</span></p>
+<h3 id="vi">VI</h3>
+<p><span
+class="math display">\[F_{IV}[n,m]=\sum_{j=0}^{m}{\frac{(-1)^{m-j}\times
+j^n}{j!\times(m-j)!}}\]</span></p>
+<h3 id="vii">VII</h3>
+<p><span
+class="math display">\[F_{VII}[n,m]=C_{m-1}^{n+m-1}\]</span></p>
+<h3 id="viii">VIII</h3>
+<p><span class="math display">\[F_{VII}[n,m]=C_{n}^{m}\]</span></p>
+<h3 id="ix">IX</h3>
+<p><span class="math display">\[F_{VII}[n,m]=C_{m-1}^{n-1}\]</span></p>
+<h3 id="x">X</h3>
+<p><span class="math display">\[
+F_{X}[n,m]=\left\{\begin{aligned}&amp;1  &amp;(n=0)&amp;\\&amp;0  &amp;(n\not=0\
+and\ m=0)&amp;\\&amp;0  &amp;(n&lt;0\ or \
+m&lt;0)&amp;\\&amp;F_{X}[n,m-1]+F_{X}[n-m,m]&amp;
+others&amp;\end{aligned}\right.\]</span></p>
+<h3 id="xi">XI</h3>
+<p><span class="math display">\[ F_{XI}[n,m]=\left\{\begin{aligned}0
+&amp; &amp;(n&gt;m) \\1 &amp; &amp;(n\leq
+m)\end{aligned}\right.\]</span></p>
+<h3 id="xii">XII</h3>
+<p><span class="math display">\[F_{XII}[n,m]=F_{X}[n-m,m]\]</span></p>
 <link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
       
     </div>
