@@ -2475,6 +2475,19 @@ ul.breadcrumb li:last-child {
     color: #eee;
   }
 }
+.gt-header a,
+.gt-comments a,
+.gt-popup a {
+  border-bottom: 0;
+}
+.gt-container .gt-popup .gt-action.is--active::before {
+  top: 0.7em;
+}
+@media (prefers-color-scheme: dark) {
+  .gt-container .gt-header-textarea {
+    background-color: var(--card-bg-color) !important;
+  }
+}
 .search-active {
   overflow: hidden;
 }
@@ -2867,7 +2880,7 @@ header.header {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #57ff40;
+  background: #ff5363;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -2916,4 +2929,10 @@ header.header {
 }
 .sub-menu .menu-item {
   display: inline-block;
+}
+.fireworks {
+  left: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
 }
